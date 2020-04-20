@@ -1,0 +1,14 @@
+version: "3"
+services:
+  ch:
+    build:
+        context: .
+        dockerfile: clickhouse.Dockerfile
+    ports:
+        - "8123:8123"
+    restart: always
+  tabix:
+    image: spoonest/clickhouse-tabix-web-client
+    ports:
+        - "8124:80"
+    restart: always
