@@ -6,9 +6,16 @@ services:
         dockerfile: clickhouse.Dockerfile
     ports:
         - "8123:8123"
+    networks:
+        - clickhouse
     restart: always
   tabix:
     image: spoonest/clickhouse-tabix-web-client
     ports:
         - "8124:80"
+    networks:
+        - clickhouse
     restart: always
+
+networks:
+    clickhouse:
