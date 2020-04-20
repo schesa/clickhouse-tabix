@@ -1,11 +1,15 @@
-version: "3"
+version: "3.2"
 services:
   ch:
     build:
         context: .
         dockerfile: clickhouse.Dockerfile
+        cache_from:
+            - yandex/clickhouse-server:latest
     ports:
         - "8123:8123"
+    volumes:
+        -  ch_db:/var/lib/clickhouse
     networks:
         - clickhouse
     restart: always
@@ -15,7 +19,12 @@ services:
         - "8124:80"
     networks:
         - clickhouse
+    depends_on:
+        - ch
     restart: always
 
 networks:
     clickhouse:
+    
+volumes:
+    ch_db:
