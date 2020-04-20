@@ -8,9 +8,10 @@ Port 8123
 
 Port 8124
 
-Config with no password
+Configured with no password
 
-Login details:
+
+Login details
 
   > URL: http://127.0.0.1:8123
 
