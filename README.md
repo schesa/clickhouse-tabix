@@ -12,7 +12,7 @@ Config with no password
 
 Login details:
 
-  URL: http://127.0.0.1:8123
+  > URL: http://127.0.0.1:8123
 
-  Login: default
+  > Login: default
     
