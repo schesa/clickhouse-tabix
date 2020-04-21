@@ -22,9 +22,23 @@ services:
     depends_on:
         - ch
     restart: always
+  mysql:
+    image: mariadb
+    environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_TCP_PORT=3306
+    ports:  
+        - "3306:3306"
+    volumes:
+        -  mysql:/var/lib/mysql
+    networks:
+        - mysql
+    restart: always
 
 networks:
     clickhouse:
+    mysql:
     
 volumes:
     ch_db:
+    mysql:
