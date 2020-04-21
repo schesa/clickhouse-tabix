@@ -1,4 +1,10 @@
+To run: 
+> Change dir to this folder
+> docker-compose up -d
 
+# mariadb
+
+Port 3306
 
 # clickhouse-server
 
