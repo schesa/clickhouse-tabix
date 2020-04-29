@@ -1,19 +1,22 @@
 To run: 
-> Change dir to this folder
-
-> docker-compose up -d
+```sh
+$> cd project
+```
+```sh
+$> docker-compose up -d
+```
 
 # mariadb
 
-Port 3306
+Port **3306**
 
 # clickhouse-server
 
-Port 8123
+Port **8123**
 
 # tabix
 
-Port 8124
+Port **8124**
 
 Configured with no password
 
